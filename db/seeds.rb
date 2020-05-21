@@ -1,7 +1,7 @@
 require_relative("../models/category.rb")
 require_relative("../models/merchant.rb")
 require_relative("../models/transaction.rb")
-require("pry-byebug")
+
 
 
 Transaction.delete_all()
@@ -99,6 +99,3 @@ transaction6=Transaction.new({
   "transaction_date"=>"2019-12-01"
 })
 transaction6.save
-
-binding.pry
-nil
