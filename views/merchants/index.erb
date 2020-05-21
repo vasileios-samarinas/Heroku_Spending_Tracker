@@ -1,0 +1,20 @@
+<table class="transactions">
+  <tr>
+    <th>Merchants</th>
+    <th>Logo</th>
+  </tr>
+<% for merchant in @merchants %>
+<tr>
+  <td><p><a href="/merchants/<%= merchant.id%>"><%=merchant.name %></a></p></td>
+  <td><img src=<%=merchant.logo %> height="100"></td>
+  </tr>
+<% end %>
+<form method="post" action="/merchants">
+  <label for="merchant_name">Merchant Name:</label>
+    <input id="merchant_name" type="text" name="name" />
+
+  <label for="merchant_logo">Merchant Logo:</label>
+    <input id="merchant_logo" type="text" name="logo" />
+
+  <input class="myButton" type='submit' value="Create Merchant"/>
+</form>

@@ -1,0 +1,7 @@
+<div class="center">
+  <h2><%= @merchant.name %> </h2>
+  <img src=<%=@merchant.logo%> class="center1">
+  <div class="center1"><a href="/merchants/<%= @merchant.id %>/edit" class="myButton">Edit Merchant</a></div>
+  <form method="post" action="/merchants/<%= @merchant.id %>/delete" class="center1">
+    <input class="myButton" type="submit" value="Delete Merchant"/>
+</div>
